@@ -11,56 +11,57 @@
 <?import javafx.scene.layout.*?>
 
 <SplitPane dividerPositions="0.6967871485943775" prefHeight="743.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.its.sparkfx.forms.main.FrmMainPresenter">
-  <items>
-      <VBox>
-         <children>
-            <MenuBar>
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <ToolBar prefHeight="40.0" prefWidth="200.0">
-              <items>
-                  <TextField fx:id="txtUrl" prefHeight="25.0" prefWidth="446.0" text="http://localhost:4040" />
-                <Button fx:id="btnLoadPage" mnemonicParsing="false" onAction="#loadPage" text="Load Page" />
-                  <Label fx:id="memoryLabel" prefHeight="17.0" prefWidth="127.0">
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </Label>
-              </items>
-            </ToolBar>
-            <WebView fx:id="webView" prefHeight="424.0" prefWidth="740.0" VBox.vgrow="ALWAYS" />
-         </children>
-      </VBox>
-      <VBox maxWidth="300.0" prefWidth="300.0">
-         <children>
-            <TitledPane alignment="CENTER" collapsible="false" prefHeight="200.0" prefWidth="200.0" text="Start a Spark Job">
-               <content>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <TextArea prefHeight="200.0" prefWidth="200.0" text="Start an array filter job for an array containing 3 million random strings class name is  StringArrayFilterJob" wrapText="true" />
-                        <Region minHeight="10.0" prefHeight="37.0" prefWidth="277.0" />
-                        <Button fx:id="btnStartStringArrayFilterJob" mnemonicParsing="false" onAction="#StartStringArrayFilterJob" prefHeight="25.0" prefWidth="283.0" text="Start String Array Filter" textAlignment="CENTER" />
-                     </children>
-                  </VBox>
-               </content>
-            </TitledPane>
-         </children>
-      </VBox>
-  </items>
+    <items>
+        <VBox>
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                        <TextField fx:id="txtUrl" prefHeight="25.0" prefWidth="446.0" text="http://localhost:4040" />
+                        <Button fx:id="btnLoadPage" mnemonicParsing="false" onAction="#loadPage" text="Reload Page" />
+                        <Label fx:id="memoryLabel" prefHeight="17.0" prefWidth="127.0">
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </Label>
+                    </items>
+                </ToolBar>
+                <WebView fx:id="webView" prefHeight="424.0" prefWidth="740.0" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+        <VBox maxWidth="300.0" prefWidth="300.0">
+            <children>
+                <TitledPane alignment="CENTER" collapsible="false" prefHeight="200.0" prefWidth="200.0" text="Start a Spark Job">
+                    <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <TextArea prefHeight="200.0" prefWidth="200.0" text="Start an array filter job for an array containing 3 million random
+strings class name is StringArrayFilterJob --- P.S. this job will first create the string list in RAM then pass it to SPARK" wrapText="true" />
+                                <Region minHeight="10.0" prefHeight="37.0" prefWidth="277.0" />
+                                <Button fx:id="btnStartStringArrayFilterJob" mnemonicParsing="false" onAction="#StartStringArrayFilterJob" prefHeight="25.0" prefWidth="283.0" text="Start String Array Filter" textAlignment="CENTER" />
+                            </children>
+                        </VBox>
+                    </content>
+                </TitledPane>
+            </children>
+        </VBox>
+    </items>
 </SplitPane>

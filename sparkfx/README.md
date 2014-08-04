@@ -1,8 +1,7 @@
-igniter.fx
+SparkFX
 ===========
 
-0. Use recent JDK 8 (JavaFX is already in the classpath). You can use the build.sh to temporarily set the JAVA_HOME in the script
-1. Build the project with mvn clean install
-2. Start the application with java -jar ./target/[project.artifactId]-app.jar
+0. Use latest version of JDK 8
+1. Open the project using netbeans 8
+2. click the run button
 
-See also: [http://afterburner.adam-bien.com](http://afterburner.adam-bien.com)
